@@ -10,8 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var errorContainer: UIView!
+    @IBOutlet weak var errorMessage: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        errorContainer.isHidden = true
+        errorMessage.isHidden = true
         // Do any additional setup after loading the view.
     }
 
