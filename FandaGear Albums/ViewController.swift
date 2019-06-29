@@ -19,6 +19,12 @@ class ViewController: UIViewController {
         errorContainer.isHidden = true
         errorMessage.isHidden = true
         // Do any additional setup after loading the view.
+        if UserDefaults.standard.object(forKey: "user_data") != nil {
+            user.username = UserDefaults.standard.string(forKey: "user_data")!
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "postLogIn", sender: self)
+            }
+        }
     }
     @IBAction func loginTapped(_ sender: Any) {
         checkCredentials(username: usernameField.text!, password: passwordField.text!)
@@ -35,15 +41,10 @@ class ViewController: UIViewController {
                 do {
                     let parsedData = try JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
                     
-                    print(parsedData["result"]!)
-
                     if((parsedData["result"]! as AnyObject).isEqual("true")){
                         // Correct Credentials
                         self.user.username = username
-                        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                            let vc = segue.destination as? HomeViewController
-                            vc?.user = self.user
-                        }
+                        UserDefaults.standard.set(self.user.username, forKey: "user_data")
                         DispatchQueue.main.async {
                         self.performSegue(withIdentifier: "postLogIn", sender: self)
                         }

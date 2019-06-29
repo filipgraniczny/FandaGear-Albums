@@ -9,10 +9,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    var user = loggedInUser()
+    @IBOutlet weak var welcomeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        welcomeLabel.text = "Hello, " + UserDefaults.standard.string(forKey: "user_data")! + "!"
 
         // Do any additional setup after loading the view.
     }
