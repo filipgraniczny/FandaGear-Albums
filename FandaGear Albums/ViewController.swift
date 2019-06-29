@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var user = loggedInUser()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         errorContainer.isHidden = true
         errorMessage.isHidden = true
         // Do any additional setup after loading the view.
