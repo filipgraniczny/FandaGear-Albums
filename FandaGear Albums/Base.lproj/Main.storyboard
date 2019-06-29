@@ -66,7 +66,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQm-RQ-Qkr">
                                 <rect key="frame" x="90" y="433" width="234" height="30"/>
@@ -77,7 +77,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ei-x3-P0M">
                                 <rect key="frame" x="156" y="325" width="102" height="26"/>
@@ -113,6 +113,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginTapped:" destination="hs9-iB-iHb" eventType="touchUpInside" id="OjM-rl-yKQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5L-UJ-f0x">
                                 <rect key="frame" x="125" y="571" width="164" height="30"/>
@@ -178,11 +181,34 @@
                     <connections>
                         <outlet property="errorContainer" destination="Tkb-d1-80d" id="bIe-sU-MTp"/>
                         <outlet property="errorMessage" destination="2XE-6s-15L" id="ytL-B1-deP"/>
+                        <outlet property="passwordField" destination="JQm-RQ-Qkr" id="wuQ-xX-aVW"/>
+                        <outlet property="usernameField" destination="W35-TC-O1t" id="I4e-jC-eMe"/>
+                        <segue destination="sAj-fK-UTH" kind="push" identifier="postLogIn" id="0zY-Rm-FyH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGZ-QG-oXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2166.666666666667" y="30.803571428571427"/>
+            <point key="canvasLocation" x="2167" y="33"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="USM-6N-eCY">
+            <objects>
+                <viewController id="sAj-fK-UTH" customClass="HomeViewController" customModule="FandaGear_Albums" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YL5-pV-jMp"/>
+                        <viewControllerLayoutGuide type="bottom" id="XRT-MV-b1L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mod-cc-YZx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aJE-ms-4jA"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nn8-Yg-5OW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2993" y="33"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dzw-bj-5mc">

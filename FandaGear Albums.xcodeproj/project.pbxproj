@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FC218D0E22C05EE10020D3E6 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC218D0D22C05EE10020D3E6 /* CreateAccountViewController.swift */; };
 		FC218D1222C060CA0020D3E6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC218D1022C0603D0020D3E6 /* WebKit.framework */; };
+		FC797DD122C6FC4300AD978D /* loggedInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC797DD022C6FC4300AD978D /* loggedInUser.swift */; };
+		FC797DD322C6FF0700AD978D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC797DD222C6FF0700AD978D /* HomeViewController.swift */; };
 		FCF974D222C0319800C70B9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF974D122C0319800C70B9F /* AppDelegate.swift */; };
 		FCF974D422C0319800C70B9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF974D322C0319800C70B9F /* ViewController.swift */; };
 		FCF974D722C0319800C70B9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF974D522C0319800C70B9F /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		FC218D0D22C05EE10020D3E6 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		FC218D1022C0603D0020D3E6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		FC797DD022C6FC4300AD978D /* loggedInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loggedInUser.swift; sourceTree = "<group>"; };
+		FC797DD222C6FF0700AD978D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FCF974CE22C0319800C70B9F /* FandaGear Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FandaGear Albums.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF974D122C0319800C70B9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCF974D322C0319800C70B9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				FCF974D822C0319900C70B9F /* Assets.xcassets */,
 				FCF974DD22C0319900C70B9F /* Info.plist */,
 				FC218D0D22C05EE10020D3E6 /* CreateAccountViewController.swift */,
+				FC797DD022C6FC4300AD978D /* loggedInUser.swift */,
+				FC797DD222C6FF0700AD978D /* HomeViewController.swift */,
 			);
 			path = "FandaGear Albums";
 			sourceTree = "<group>";
@@ -267,7 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC797DD322C6FF0700AD978D /* HomeViewController.swift in Sources */,
 				FC218D0E22C05EE10020D3E6 /* CreateAccountViewController.swift in Sources */,
+				FC797DD122C6FC4300AD978D /* loggedInUser.swift in Sources */,
 				FCF974D422C0319800C70B9F /* ViewController.swift in Sources */,
 				FCF974D222C0319800C70B9F /* AppDelegate.swift in Sources */,
 			);
